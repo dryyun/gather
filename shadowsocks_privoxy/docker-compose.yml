@@ -1,0 +1,25 @@
+version: "2.0"
+
+services:
+  shadowsocks:
+    build: ./shadowsocks
+    volumes:
+      - ./shadowsocks/sslocal.json:/etc/sslocal.json
+    environment:
+      - SS_MODULE= ss-local 
+      - SS_CONFIG=" -c /etc/sslocal.json "
+      - KCP_FLAG=false
+    ports:
+      - 1080:1080
+
+  privoxy:
+    build: ./privoxy
+    volumes:
+      - ./privoxy/config:/etc/privoxy/config
+      - ./privoxy/gfwlist.action:/etc/privoxy/gfwlist.action
+    ports:
+      - 8118:8118
+    depends_on:
+      - shadowsocks
+    links:
+      - shadowsocks

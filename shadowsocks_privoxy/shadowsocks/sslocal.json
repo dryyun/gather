@@ -1,0 +1,11 @@
+{
+    "local_address":"0.0.0.0", 
+    "local_port":1080,
+    
+    
+    "server":"*.*.*.*",
+    "server_port":1234,
+    "password":"****",
+    "timeout":600,
+    "method":"***"
+}
