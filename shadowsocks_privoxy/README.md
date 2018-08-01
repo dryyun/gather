@@ -8,6 +8,9 @@
 
 ### shadowsocks 配置
 
+
+cp ./shadowsocks/sslocal.example.json ./shadowsocks/sslocal.json   
+
 配置文件 ./shadowsocks/sslocal.json  
 
 `local` 部分保持不动，主要是 `local_port` 配置了 1080 ， 牵一发而动全身  
