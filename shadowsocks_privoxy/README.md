@@ -51,7 +51,7 @@ function proxy() {
 }
 
 function unproxy() {
-    unset http_proxy && unset http_proxy
+    unset http_proxy && unset https_proxy
     echo "已关闭代理"
 }
 ```
