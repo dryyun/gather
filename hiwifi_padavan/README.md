@@ -28,7 +28,7 @@ curl  https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt > ss.
 
 md5sum ss.gfwlist.lite.txt > ss.gfwlist.lite.txt.md5sum.txt
 
-//
+// 生成 plain 
 curl https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  | base64 --decode  > ss.gfwlist.lite.txt.plain
 
 // 
