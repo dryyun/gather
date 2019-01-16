@@ -20,18 +20,19 @@ md5sum chnroute.txt > chnroute.txt.md5sum.txt
 
 ```shell
 
-// 生成最新的  glwlist.txt
-
-curl  https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt > ss.gfwlist.lite.txt
-
-// 生成 md5sum 文件  
-
-md5sum ss.gfwlist.lite.txt > ss.gfwlist.lite.txt.md5sum.txt
-
-// 生成 plain 
+// 生成最新的 plain   glwlist.txt
 curl https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  | base64 --decode  > ss.gfwlist.lite.txt.plain
 
-// 
-md5sum ss.gfwlist.lite.txt.plain > ss.gfwlist.lite.txt.plain.md5sum.txt
+curl  https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt | base64 --decode  > ss.gfwlist.lite.txt
+
+// 生成 plain  md5sum 文件  
+
+md5sum ss.gfwlist.lite.txt > ss.gfwlist.lite.txt.plain.md5sum.txt
+
+// 下载最新的 decode 文件 
+curl https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt  > ss.gfwlist.lite.txt
+
+// 生成 decode 文件对应的   md5sum 文件  
+md5sum ss.gfwlist.lite.txt > ss.gfwlist.lite.txt.md5sum.txt
 
 ```
