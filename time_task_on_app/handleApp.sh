@@ -3,9 +3,9 @@
 # appName 需要替换为真实 App，只需要替换 set appName to "Safari" 这里的 appName 即可
 
 hour=`date +%H`
-if [[ "$hour" > 18 ]]; then
+if [ $hour -ge 18 ]  && [ $hour -le 21 ] ; then
     osascript /path/killapp.scpt 
-elif [[ "$hour" < 12 ]]; then 
+elif [ $hour -ge 9 ] && [ $hour -le 12 ] ; then 
     osascript -e '
     on is_running(appName)
         tell application "System Events" to (name of processes) contains appName
