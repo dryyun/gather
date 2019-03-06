@@ -15,5 +15,9 @@
 - com.handleApp.plist 是 launchctl 的配置文件
     - 设置某些时间点执行，类似 crontab 吧
     - 需要 `mv ~/Library/LaunchAgents` 目录下，用于用户执行
+    - 加载 `launchctl load -w  ~/Library/LaunchAgents/com.handleApp.plist` 
+    - 查看 `launchctl list |grep handle`
+    - 卸载 `launchctl unload -w  ~/Library/LaunchAgents/com.handleApp.plist` 
+    - 每次修改了 plist 文件，都需要 unload - load 操作一遍，并没有找到 reload 
 
 
